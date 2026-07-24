@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoveScape — Before & After Comparison</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+  .subtitle { text-align: center; color: #8b949e; font-size: 15px; margin-bottom: 48px; }
+  .section-divider { text-align: center; font-size: 18px; font-weight: 600; color: #e6edf3; margin: 56px 0 32px; padding: 16px 0; border-top: 2px solid #30363d; border-bottom: 2px solid #30363d; }
+  .section-divider .badge { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-right: 10px; vertical-align: middle; }
+  .badge-i2i { background: #1f6feb22; color: #58a6ff; }
+  .badge-nsfw { background: #f8514922; color: #f85149; }
+  .badge-t2i { background: #a371f722; color: #a371f7; }
+  .test { margin-bottom: 48px; border: 1px solid #21262d; border-radius: 12px; overflow: hidden; background: #161b22; }
+  .test-header { padding: 14px 24px; background: #1c2128; border-bottom: 1px solid #21262d; font-size: 14px; font-weight: 600; color: #e6edf3; }
+  .row { display: grid; gap: 0; }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .col { text-align: center; padding: 16px; border-right: 1px solid #21262d; }
+  .col:last-child { border-right: none; }
+  .col-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 12px; padding: 4px 12px; border-radius: 20px; display: inline-block; }
+  .col-label.ref { background: #1f6feb22; color: #58a6ff; }
+  .col-label.old { background: #f8514922; color: #f85149; }
+  .col-label.new { background: #3fb95022; color: #3fb950; }
+  .col img { width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+  .col img:hover { transform: scale(1.02); }
+  .prompt-row { padding: 12px 24px; border-top: 1px solid #21262d; font-size: 13px; color: #8b949e; }
+  .prompt-row code { background: #1c2128; padding: 4px 8px; border-radius: 4px; color: #c9d1d9; font-size: 12px; display: block; margin-top: 6px; line-height: 1.5; white-space: pre-wrap; word-break: break-word; }
+  .standalone { margin-bottom: 48px; border: 1px solid #21262d; border-radius: 12px; overflow: hidden; background: #161b22; }
+  .standalone .test-header { background: #1c2128; border-bottom: 1px solid #21262d; }
+  .standalone .col { padding: 16px; }
+  .standalone .col img { max-width: 500px; margin: 0 auto; display: block; }
+  .footer { text-align: center; color: #484f58; font-size: 13px; margin-top: 48px; padding-top: 24px; border-top: 1px solid #21262d; }
+</style>
+</head>
+<body>
+
+<h1>LoveScape — Image Quality Improvements</h1>
+<p class="subtitle">Reference → Old Output → New Output &nbsp;|&nbsp; Improved sharpness, skin tone accuracy, and prompt adherence</p>
+
+<!-- ==================== SECTION 1: Img2Img SFW/NSFW ==================== -->
+<div class="section-divider"><span class="badge badge-i2i">Img2Img</span> Character 1 — Auburn Hair, Fair Skin</div>
+
+<!-- Test 1 -->
+<div class="test">
+  <div class="test-header">Posing on bed in black lace lingerie</div>
+  <div class="row row-3">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/generate-image/1784014157514.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label old">Old Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/14-07-26/3c4398b6-5f62-4400-bb39-1b27e9326be0/ec805.png" alt="Old">
+    </div>
+    <div class="col">
+      <div class="col-label new">New Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/e7f0f0a0-d6c3-469a-aabc-e6e91292fdf9/22195.png" alt="New">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>Three-quarter view, she is posing alone on the bed in black lace lingerie, photorealistic, 8k, sharp focus, high detail, no artifacts, clean render, Maintain base image skin tone and species</code></div>
+</div>
+
+<!-- Test 2 -->
+<div class="test">
+  <div class="test-header">Standing fully nude in bedroom, full body</div>
+  <div class="row row-3">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/generate-image/1784014157514.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label old">Old Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/14-07-26/33c87e59-b973-4196-94bf-7107b58bb836/ce0ac.png" alt="Old">
+    </div>
+    <div class="col">
+      <div class="col-label new">New Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/e10cc73d-c030-44c8-89d0-1dddf77550d9/b66cd.png" alt="New">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>Three-quarter view, she is standing alone fully nude in the bedroom, full body, photorealistic, 8k, sharp focus, high detail, no artifacts, clean render, Maintain base image skin tone and species</code></div>
+</div>
+
+<!-- Test 3 -->
+<div class="test">
+  <div class="test-header">Sitting on bed, legs spread, fully nude</div>
+  <div class="row row-3">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/generate-image/1784014157514.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label old">Old Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/14-07-26/8c735072-e62a-4004-b7b4-8669331e6b40/6bab8.png" alt="Old">
+    </div>
+    <div class="col">
+      <div class="col-label new">New Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/ccf6c42a-23e2-4779-8465-57baa175b9f2/55526.png" alt="New">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>Three-quarter view, she is sitting on the bed with her legs spread wide, fully nude, photorealistic, 8k, sharp focus, high detail, no artifacts, clean render, Maintain base image skin tone and species</code></div>
+</div>
+
+<!-- ==================== SECTION 2: Character 2 ==================== -->
+<div class="section-divider"><span class="badge badge-i2i">Img2Img</span> Character 2 — Brown Hair, Fair Skin</div>
+
+<!-- Test 4 -->
+<div class="test">
+  <div class="test-header">Standing fully nude in bedroom, full body (POV)</div>
+  <div class="row row-3">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/model-acceptance-pipeline/1784008709090.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label old">Old Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/14-07-26/7c46ce20-f9a9-4d64-b777-6db948b21445/81d10.png" alt="Old">
+    </div>
+    <div class="col">
+      <div class="col-label new">New Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/71c25169-573a-4ad2-9525-aab8dd06832b/bdde1.png" alt="New">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>POV shot, she is standing alone fully nude in the bedroom, full body</code></div>
+</div>
+
+<!-- Test 5 -->
+<div class="test">
+  <div class="test-header">Sitting at a cafe by the window (SFW)</div>
+  <div class="row row-3">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/model-acceptance-pipeline/1784008709090.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label old">Old Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/14-07-26/1b6bf5bd-157f-4450-99ab-d26d7609df0d/49ff8.png" alt="Old">
+    </div>
+    <div class="col">
+      <div class="col-label new">New Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/b01bd3bf-7e78-4465-b0b7-bc9484fd2249/dadc5.png" alt="New">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>Three-quarter view, she is sitting alone at a cafe by the window with a cup of coffee</code></div>
+</div>
+
+<!-- ==================== SECTION 3: NSFW Background Tests ==================== -->
+<div class="section-divider"><span class="badge badge-nsfw">NSFW</span> Background Adherence Tests — Character 2</div>
+
+<div class="test">
+  <div class="test-header">Doggy style in bedroom</div>
+  <div class="row row-2">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/model-acceptance-pipeline/1784008709090.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label new">Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/ab4d2dfa-2ed2-49d4-95a9-c22e5850207f/6befa.png" alt="Output">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>fully naked in a bedroom fucking in doggy style</code></div>
+</div>
+
+<div class="test">
+  <div class="test-header">Blowjob POV</div>
+  <div class="row row-2">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/model-acceptance-pipeline/1784007060988.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label new">Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/e7201685-0448-433d-9461-27a14ac9af9e/e6c09.png" alt="Output">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>POV shot, she is giving a blowjob looking up at the camera</code></div>
+</div>
+
+<div class="test">
+  <div class="test-header">Anal from behind, bent over bed</div>
+  <div class="row row-2">
+    <div class="col">
+      <div class="col-label ref">Reference</div>
+      <img src="https://scene-engine-assets.voyce.me/see/inputs/model-acceptance-pipeline/1784007060988.jpg" alt="Reference">
+    </div>
+    <div class="col">
+      <div class="col-label new">Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/3fe5fc18-080f-4a89-8991-c51fa5e2aaef/21615.png" alt="Output">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>POV shot, one man is fucking her anally from behind, bent over the bed</code></div>
+</div>
+
+<!-- ==================== SECTION 4: Text2Img SFW ==================== -->
+<div class="section-divider"><span class="badge badge-t2i">Text2Img</span> SFW Character Generation</div>
+
+<div class="test">
+  <div class="test-header">College student walking across campus</div>
+  <div class="row" style="grid-template-columns: 1fr;">
+    <div class="col" style="max-width: 600px; margin: 0 auto;">
+      <div class="col-label new">Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/4c4b55f3-fe3c-4cb1-95bc-ce8aa28f293f/01588.png" alt="Output">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>A twenty-year-old college student with warm olive skin, hazel eyes, and shoulder-length wavy brown hair walks across a busy university campus carrying a backpack over one shoulder. She wears an oversized navy university hoodie with a faded school logo, black athletic shorts, white crew socks, and worn white sneakers. Students sit on the grass talking between classes while brick academic buildings and tall oak trees fill the background. Fallen leaves scatter across the sidewalk and bicycles are parked nearby. She is positioned slightly left of center in a medium full-body shot, glancing toward the camera with a relaxed smile as she walks past. Soft afternoon sunlight creates gentle shadows across the campus. Candid amateur digital photography style with natural available light, slight motion blur, subtle digital camera noise, realistic skin texture, imperfect framing, lightly compressed image quality, authentic college campus snapshot. Ultra HD, 4K.</code></div>
+</div>
+
+<div class="test">
+  <div class="test-header">Woman stretching at university rec center</div>
+  <div class="row" style="grid-template-columns: 1fr;">
+    <div class="col" style="max-width: 600px; margin: 0 auto;">
+      <div class="col-label new">Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/28b2ad16-2579-4322-99f7-8ea901424f0e/059ef.png" alt="Output">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>A twenty-three-year-old woman with medium brown skin, dark brown eyes, and curly black hair tied into a high ponytail stretches before a workout inside a university recreation center. She has a lean athletic build and wears charcoal leggings, a fitted teal sports bra, white training shoes, and wireless earbuds. Weight racks, treadmills, and students exercising naturally fill the background. A water bottle and gym bag rest beside her on the floor. She is captured mid stretch in a full-body composition while bright daylight pours through the large windows overlooking campus. Candid amateur digital photography style with natural lighting, subtle sensor noise, realistic textures, slight motion blur, imperfect framing, authentic fitness snapshot. Ultra HD, 4K.</code></div>
+</div>
+
+<div class="test">
+  <div class="test-header">College student relaxing by the pool</div>
+  <div class="row" style="grid-template-columns: 1fr;">
+    <div class="col" style="max-width: 600px; margin: 0 auto;">
+      <div class="col-label new">Output</div>
+      <img src="https://scene-engine-assets.voyce.me/see/outputs/24-07-26/4e482e35-b7ba-4a31-b94a-0c6b457c2efd/06cef.png" alt="Output">
+    </div>
+  </div>
+  <div class="prompt-row">Prompt:<code>A twenty-one-year-old college student with lightly tanned skin, blue eyes, and shoulder-length sandy blonde hair relaxes beside a university recreation pool on a warm afternoon. She wears a simple navy bikini with an oversized white linen shirt left open over it and casual sandals placed beside a folded university towel. Students swim and talk in the background while palm trees, lounge chairs, and the campus recreation building surround the pool. She sits casually at the edge of the water looking toward the camera with an easy smile as sunlight reflects across the pool surface. Candid amateur digital photography style with bright natural sunlight, slight digital noise, casual vacation snapshot aesthetic, imperfect composition, realistic skin texture, lightly compressed image quality. Ultra HD, 4K.</code></div>
+</div>
+
+<div class="footer">VoyceMe Scene Engine — LoveScape Quality Comparison &nbsp;|&nbsp; July 2026</div>
+
+</body>
+</html>
